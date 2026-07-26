@@ -4,6 +4,10 @@ Ejemplo básico de NestJS para demostrar en la presentación de NestJS de la mat
 
 Expone un endpoint `GET /products` que devuelve una lista de productos hardcodeados (sin conexión a DB), usando la arquitectura clásica de Nest (module, controller, service).
 
+## Informe
+
+https://docs.google.com/document/d/1-NeYEYYbMZmbcf9atty0duV3TnvL3P7WHvGgTnHI9Ws/edit?usp=sharing
+
 ## Presentación
 
 https://gamma.app/docs/NestJS-d1x3mtvyy5wd1un
