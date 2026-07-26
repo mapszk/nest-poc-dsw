@@ -1,15 +1,15 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { Product } from './product.interface';
+import { PRODUCTS_REPOSITORY, ProductsRepository } from './products.repository';
 
 @Injectable()
 export class ProductsService {
-  private readonly products: Product[] = [
-    { id: 1, name: 'Teclado mecánico', price: 89.99 },
-    { id: 2, name: 'Mouse inalámbrico', price: 29.99 },
-    { id: 3, name: 'Monitor 27"', price: 249.99 },
-  ];
+  constructor(
+    @Inject(PRODUCTS_REPOSITORY)
+    private readonly productsRepository: ProductsRepository,
+  ) {}
 
   findAll(): Product[] {
-    return this.products;
+    return this.productsRepository.findAll();
   }
 }
